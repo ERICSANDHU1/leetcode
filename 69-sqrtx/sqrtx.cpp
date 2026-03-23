@@ -5,10 +5,10 @@ public:
         int high = x ; 
         int ans = 0 ; 
         while(low <= high){
-            double mid = (low + high) / 2;
+            long long  mid = (low + high) / 2;
             if((mid * mid) <= x){
                 ans = mid;
-                low = low + 1;
+                low = mid  + 1;
             }
             else{
                 high = mid - 1;
