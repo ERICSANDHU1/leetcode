@@ -1,5 +1,6 @@
-class Solution {
-public:
+
+#include<bits/stdc++.h>
+using namespace std;
     vector<int> twoSum(vector<int>& nums, int target) {
         unordered_map<int,int>mp;
         int n = nums.size();
@@ -10,4 +11,4 @@ public:
         }
         return {};
     }
-};
+    

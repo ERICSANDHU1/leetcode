@@ -1,5 +1,5 @@
-class Solution {
-public:
+   #include<bits/stdc++.h>
+    using namespace std;
     int uniquePaths(int n, int m) {
         vector<vector<int>>dp(n,vector<int>(m,1));
         for(int i = 1 ; i < n ; i++){
@@ -9,4 +9,9 @@ public:
         }
         return dp[n-1][m-1];
     }
-};
+    int main(){
+        int n , m ; 
+        cin >> n >> m ; 
+        int result = uniquePaths(n,m);
+        cout << result << endl;
+    }

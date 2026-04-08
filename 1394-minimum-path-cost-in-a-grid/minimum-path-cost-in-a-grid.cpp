@@ -1,5 +1,5 @@
-class Solution {
-public:
+#include<bits/stdc++.h>
+using namespace std;
     int minPathCost(vector<vector<int>>& grid, vector<vector<int>>& moveCost) {
         int n = grid.size();
         int m = grid[0].size();
@@ -23,4 +23,3 @@ public:
 
         return *min_element(dp[n-1].begin(), dp[n-1].end());
     }
-};
