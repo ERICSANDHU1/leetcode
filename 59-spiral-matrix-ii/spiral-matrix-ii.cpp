@@ -27,7 +27,7 @@ public:
                 bottom--;
             }
 
-            // left column
+            
             if (left <= right) {
                 for (int i = bottom; i >= top; i--)
                     mat[i][left] = val++;
