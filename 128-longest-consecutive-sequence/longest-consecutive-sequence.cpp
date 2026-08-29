@@ -1,32 +1,22 @@
-#include <bits/stdc++.h>
-using namespace std;
-
 class Solution {
 public:
     int longestConsecutive(vector<int>& nums) {
-        if (nums.empty()) return 0;
-
-        sort(nums.begin(), nums.end());
-
-        int longest = 1;
-        int current = 1;
-
-        for (int i = 1; i < nums.size(); i++) {
-            
-            if (nums[i] == nums[i - 1]) {
-                continue;  // skip duplicates
-            }
-            
-            else if (nums[i] == nums[i - 1] + 1) {
-                current++;  // consecutive
-            }
-            
-            else {
-                longest = max(longest, current);
-                current = 1;  // reset
-            }
+        unordered_set<int>st;
+        int n = nums.size();
+        for(int i = 0 ; i < n ; i ++){
+         st.insert(nums[i]);
         }
-
-        return max(longest, current);
+            int ans = 0 ; 
+          for(int num : st){
+          if(st.find(num-1) == st.end()){
+            int count = 1; 
+            while(st.find(num + 1) != st.end()){
+                num++;
+                count ++ ; 
+            }
+            ans = max(ans,count);
+          }
+        }
+        return ans;
     }
 };
