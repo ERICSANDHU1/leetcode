@@ -14,7 +14,7 @@ public:
             }
         }
          // Answer matrix
-        vector<vector<int>> ans(n, vector<int>(m, 0));
+         vector<vector<int>> ans(n, vector<int>(m, 0));
 
         for(int i = 0; i < n; i++) {
 
